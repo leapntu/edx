@@ -1,0 +1,8 @@
+7/9
+11am - 3pm, 4hrs -- Database design
+
+7/10
+8am - 12pm, 4 hrs -- Database design, Nodejs server
+
+7/11
+7:30am - 10am, 3.5 -- Raven task stim processing, server socket api
