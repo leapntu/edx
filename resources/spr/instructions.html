@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="/style/survey_style.css" rel="stylesheet" />
+    <title>SPRT Frank Instructions</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>.instr_key {display: inline-block; padding: 7px 5px 2px 5px; 
+            font-family: "Courier New", Courier, monospace; font-size: 1.2em; text-shadow:            0px 1px 0px #fff; font-weight: bold}</style>
+</head>
+
+<body> 
+<h1>Instructions Before We Begin</h1>
+<p>In the following task you will be presented with a series of sentences, and occasionally, a question regarding a sentence you have just read. The words of each sentence will be presented one at a time, and you will have to press the <span class="instr_key">space bar</span> to reveal each word as you read. This may take some getting used to, and there will be a couple of practice sentences and questions to help you acclimate before the real task begins. When you have completed all the sentences and questions you will be notified, and can then safely go back to the main task selection page to move on to the next.</p>
+<br><br>
+<button type="button" id="ready">Click here when ready to begin</button>
+
+<script>
+$("#ready").click(function(){
+    window.location.href = "index.html";
+});  
+    
+</script>
+
+</body>
+</html>

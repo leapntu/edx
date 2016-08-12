@@ -6,3 +6,6 @@
 
 7/11
 7:30am - 10am, 3.5 -- Raven task stim processing, server socket api
+
+7/20
+3pm - 5pm, 2 -- Port SPR

@@ -5,14 +5,10 @@ var io = require('socket.io')(server)
 
 app.use(express.static('public/'))
 
-server.listen(3000, function(){
-  console.log("server booted and listening")
+server.listen(80, function(){
+  console.log("server booted and listening on ")
 })
 
 io.on('connection', function (socket) {
-  console.log("connection")
-  io.emit('news', { hello: 'world' })
-  socket.on('my other event', function (data) {
-    console.log(data)
-  })
+  console.log("connection from ", socket.id)
 })
