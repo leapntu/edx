@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Self Paced Reading</title>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script> var socket = io()</script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4"> </div>
+    <div class="col-xs-4">
+      Email: <br> <input id="email" type="text"> <br>
+      Password: <br> <input id="password" type="text"> <br>
+      <button type="button" onclick=login()>Login</button>
+      <button type="button" onclick=register()>New User</button>
+    </div>
+    <div class="col-xs-4"> </div>
+</div>
+</div>
+</body>
+
+<script>
+function login() {
+  var email = document.getElementById("email").value
+  var password = document.getElementById("password").value
+  socket.emit(
+    "login",
+    { "email": email,
+      "password": password  },
+    function (data) {
+      if (!data || (data.password != password)) {
+        alert("The email and password do not match")
+        }
+      else if (data.password == password) {
+        localStorage.LEAP_subject_id = data.subject_id
+        location = "/spr/index.html"
+      }
+    }
+  )
+}
+
+function register() {
+  var email = document.getElementById("email").value
+  var password = document.getElementById("password").value
+  socket.emit(
+    "register",
+    { "email": email,
+      "password": password  },
+    function (data) {
+      if (data.status == "created") {
+        localStorage.LEAP_subject_id = data.subject_id
+        location = "/spr/index.html" }
+      else {alert("The email has already been registered, please try another address")}
+    }
+  )
+}
+</script>
+
+</html>
