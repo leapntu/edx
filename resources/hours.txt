@@ -11,13 +11,16 @@
 3pm - 5pm, 2 -- Port SPR
 
 8/4
-8am - 3pm 7 -- Raven Qualtrics (API dev)
+8am - 3pm, 7 -- Raven Qualtrics (API dev)
 
 8/8
-3pm - 6pm 3 -- Raven Qualitrics (API dev, content creation)
+3pm - 6pm, 3 -- Raven Qualitrics (API dev, content creation)
 
 8/11
-7am - 3pm 8 -- Raven Qualitrics (content creation, testing)
+7am - 3pm, 8 -- Raven Qualitrics (content creation, testing)
 
 8/12
-7am - <pm> <hrs> -- <>
+7am - 3pm, 8 -- Database access code, SPR and Login testing
+
+8/26
+11am - 6pm, 7 -- SPR Paragraph, AGL

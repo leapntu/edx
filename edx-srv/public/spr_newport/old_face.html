@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasks - LEAP Experiments</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+<style>
+    * {
+        font-family: 'Open Sans', Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        max-width: 1024px;
+        margin: 10px auto;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+    h2 {
+        margin: 0px 0px 20px 0px;
+    }
+
+    ol {
+        width: 70%;
+    }
+
+    ol li {
+        padding: 15px;
+    }
+
+    p .names {
+        font-variant: small-caps;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .chrome-info {
+        text-align: center
+    }
+
+    h3 {
+        margin-top: 50px;
+        font-weight: 700;
+    }
+
+    ul li {
+        padding: 0px 0px 10px 0px;
+    }
+
+    .semibold {
+        font-weight: 600;
+    }
+
+    .offline {
+        color: darkred;
+    }
+    .instr_key {
+        display: inline-block;
+        padding: 7px 5px 2px 5px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.2em;
+        text-shadow: 0px 1px 0px #fff;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+
+
+<div align="center"><img id="leap-logo" src="../rvl/assets/ntu_logo.jpg"/></div>
+
+
+<div class="chrome-info">
+    <h2>Basic mechanisms of learning in adulthood</h2>
+    Principal Investigator: Dr Luca ONNIS<br/>
+    <small>Linguistics and Multilingual Studies, HSS<br/>
+        Nanyang Technological University
+    </small>
+</div>
+
+  <h1>Today's Task</h1>
+  <p>In the following task you will be presented with a series of sentences, and occasionally, a question regarding a sentence you have just read. The words of each sentence will be presented one at a time, and you will have to press the <span class="instr_key">space bar</span> to reveal each word as you read. This may take some getting used to, and there will be a couple of practice sentences and questions to help you acclimate before the real task begins. When you have completed all the sentences and questions you will be notified, and can then safely go back to the main task selection page to move on to the next.</p>
+
+  <h1>Pre-Task Survey</h1>
+  <p>Before you begin, please fill out the following information. Please indicate the languages you know in order of dominance. For example, the first language listed is your most dominant language, followed by your second most dominant language, etc. For reference, native languages are those you absorbed naturally as a child from observation, whereas second language are those for which you had an instructor, formally or informally.</p>
+  Name: <input type='text' id="user"></br></br>
+  Native Languages: <input type='text' id="native"></br></br>
+  Second Languages: <input type='text' id="second"></br></br>
+  <button id="new">Ready</button>
+
+</body>
+</html>
+
+<script>
+socket = io.connect()
+
+var expRoot = "/exp/english_grammaticality/"
+var subDirectory = "users/"
+var dir = expRoot + subDirectory
+
+// Set up username logging sequence
+var expUserName = "";
+var queryString = getParameterByName("useLocal");
+if (queryString && localStorage.user !== "" && localStorage.user !== null)
+{
+    console.log("User is signed in as: " + localStorage.user);
+    expUserName = localStorage.user;
+    $("#user").val(expUserName);
+    $("#user").prop("readonly", true);
+}
+else
+{
+    console.log("User is NOT signed in");
+    $("#user").prop("readonly", false);
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$("#new").click( function() {
+  expUserName = localStorage.user = $("#user").val()
+  native = $("#native").val()
+  second = $("#second").val()
+  data = {"dir": dir, "user": expUserName, "data": { "native":native, "second":second} }
+  console.log(data)
+  socket.emit('recordData', data, function (returned) {
+    console.log(returned)
+    document.location.href="exp.html"
+    })
+})
+</script>
+
+</html>

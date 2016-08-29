@@ -8,7 +8,7 @@ var cross = new createjs.Text('x','60px Times')
 cross.x = 600
 cross.y = 300
 
-var taskName = "spr" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
+var taskName = "spr_frank" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
 
 var trainSents = [{"sent":"Space, space, space, press space to read the words.", "question":"", "answer":""}, {"sent":"Sometimes, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
 
@@ -122,7 +122,7 @@ function init(){
 //this function uses CreateJS module PreloadJS to handle file loading
 function preload(){
     var manifest = [
-    {src: "/spr/assets/sents.json", id: "sents"},
+    {src: "/spr_frank/assets/sents.json", id: "sents"},
     ];
 
     q = new createjs.LoadQueue(true);
@@ -151,7 +151,7 @@ function handleSent(){
     words = sents[sent].sent.split(" ");
     answer = sents[sent].answer;
     word = words[position];
-    corr = "NA";
+    corr = 2;
     xpos = 10;
 
     text = new createjs.Text(word, fontInfo);
@@ -238,7 +238,7 @@ function genSents(){
     sent = 0;
     raw = q.getResult('sents');
     socket.emit(
-      'incSPRCount', {},
+      'incSPRCount', {"task":"spr_frank"},
       function(resp){
         console.log(resp)
         var count = resp % raw["groups"]

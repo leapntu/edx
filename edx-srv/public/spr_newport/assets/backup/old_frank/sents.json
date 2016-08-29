@@ -1,0 +1,2191 @@
+{
+ "sents": {
+  "0": [
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Was it Bob who wrote?", 
+    "sent": "Billy wrote on the envelope."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Was his foot broken?", 
+    "sent": "He's broken his wrists very badly."
+   }, 
+   {
+    "answer": "y", 
+    "group": 0, 
+    "question": "Does he mind if people find out?", 
+    "sent": "He probably doesn't want people to know."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Did she take out the matches?", 
+    "sent": "She hid the boxes and matches well."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Was she holding the knife?", 
+    "sent": "She saw the throwing knife in his hand."
+   }, 
+   {
+    "answer": "y", 
+    "group": 0, 
+    "question": "Did the band break up?", 
+    "sent": "I was thinking of getting the band together again."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Is he blond?", 
+    "sent": "His dark hair was just visible under his white hat."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Did Frank thank the young soldier?", 
+    "sent": "Despite what Frank had told her Ellen thanked the young soldier."
+   }, 
+   {
+    "answer": "y", 
+    "group": 0, 
+    "question": "Were they drinking?", 
+    "sent": "While they sat drinking their tea, Mick dug them a trench."
+   }, 
+   {
+    "answer": "y", 
+    "group": 0, 
+    "question": "Was Mickey upright?", 
+    "sent": "In the morning Mickey stood straight with his hand behind his back."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Had they finished breakfast when the mail arrived?", 
+    "sent": "They were halfway through breakfast when a guard walked up with mail."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Was Charlie on his way to work?", 
+    "sent": "Charlie walked home slowly so that he could smoke one of his cigarettes."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Did James spend a week in the cell?", 
+    "sent": "James was only in the cell for an hour but it felt like a week."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Did Kevin follow his father to the office?", 
+    "sent": "Douglas followed his father to his office and Kevin knew from looking in the window they were arguing."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Did they invite Nigel to go for a pint after work?", 
+    "sent": "Martin decided to step in when they asked everyone but Nigel along for a pint after work on Friday."
+   }, 
+   {
+    "answer": "n", 
+    "group": 0, 
+    "question": "Have they been here before?", 
+    "sent": "They have never come this way before and so the hour of their arrival is strange if they wish to trade."
+   }, 
+   {
+    "answer": "y", 
+    "group": 0, 
+    "question": "Did Sam fold his arms across his knees?", 
+    "sent": "Sam slid down the wall and sat with his knees against his chest and folded his arms across them and put his head down on them."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Anne lost control and laughed."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "I am touched deeply in places."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Tony stopped off at his first delivery."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Let us leave these poor people in peace."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Good God, if you are watching, give me strength."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Whether Peter heard him or not Gabriel didn't care."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "He went to the door and walked out of the room."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "I am trying, old man, but I would rather kill the ship."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Why don't you tell me what happened on Saturday, step by step."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Every free man had a right to speak gathered at the calling of Council."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Fred walked into the kitchen on Saturday morning to find his mother making breakfast."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "When she had fallen, the witnesses to her death would have cut her apart."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "If this were a movie instead of a book this would be a good bit."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "If they don't approach me at any of those places then we'll know they don't care."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "He stared down the narrow pass as though expecting some challenge to issue from the mouth of it."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Rachel for no reason at all dropped the fish slice on the floor and ran from the room crying."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "He carries an axe as long as your arm and he can split a man from head to toe with it."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "If you had asked him seconds after visiting the bar what colour the girl's hair was he would have probably turned around to look."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "Despite all the publicity he was getting there was still one thing Robert knew he had to do before he could clear his conscience for good."
+   }, 
+   {
+    "answer": "", 
+    "group": 0, 
+    "question": "", 
+    "sent": "When she had gone to make a cup of tea she had noticed a small hair stuck to the moist lip of the kettle and, without thinking, had gone to remove it."
+   }
+  ], 
+  "1": [
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Did Helen go quickly?", 
+    "sent": "Helen ran to the toilet."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Did anyone hear a voice?", 
+    "sent": "I knew I heard your voice."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Was it a knife that he put on the table?", 
+    "sent": "He put the fork on the table."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Was it a policeman who was looking bored?", 
+    "sent": "The bored looking soldier continued looking bored."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Was it dark?", 
+    "sent": "She was smiling in the dark, teeth flashing."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Is our ship wide?", 
+    "sent": "It is a narrow ship, much like our own."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Does he have many followers?", 
+    "sent": "His men will not follow him and they are few."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Is his home in the village?", 
+    "sent": "He drove his truck home and walked down to the village."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Will I do anything you ask?", 
+    "sent": "You know that I will do whatever you ask of me."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Was Mike happy to get a letter?", 
+    "sent": "In the morning at breakfast Mike smiled at the letter he received."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Was there tea in the mug?", 
+    "sent": "Emma put her mug of tea down on the table with a bang."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Did she bite them?", 
+    "sent": "One by one she placed her teeth about their necks and killed them."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Were his parents wealthy?", 
+    "sent": "To his mum and dad he was just another mouth they couldn't afford to feed."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Was he determined to stop getting into trouble?", 
+    "sent": "He had to get himself in gear and stop getting into trouble and this time he meant it."
+   }, 
+   {
+    "answer": "y", 
+    "group": 1, 
+    "question": "Did Gerry receive a phone call?", 
+    "sent": "As soon as I got off the phone with the pet store man I rang Gerry and told him everything."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Did he chop the whole lot before breakfast?", 
+    "sent": "Once he'd chopped just about half, he stuck the axe into the chopping block and made his way inside to have breakfast."
+   }, 
+   {
+    "answer": "n", 
+    "group": 1, 
+    "question": "Could she see the gate?", 
+    "sent": "From here she could not see the gate but she knew that it would stand wide and gaping, welcoming the night in, and all that it held."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He called over his shoulder."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "I don't want to hear it."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "Normally they want to cut things up."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "Walter closed the door and took a breath."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He is after glory and heads for his hall."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "You give me a lead and I'll follow it."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "Lawrence rubbed the back of his neck and hung his head."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "It is not the most fragrant of places but we make do."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "From the moment we leave this spot be very careful what you say."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He rose from his seat and stopped mid way when Joe glared at him."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "George was led inside and they made him strip and gave him a uniform."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He came back to his senses when he heard his dad stand up to him."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "If you haven't seen it yet all that means is you aren't looking hard enough."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "No one had ever cared about him so much as to threaten his dad like that."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "I didn't read the local papers and neither did my parents so I had not heard about it."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "I am a man of the dead and I have felt the anguish of those passing through my hands."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He ought to have seen the patrol coming, should have spotted their track, noticed the way the forest was on edge."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "Phil ran up to the water tank, his mum would kill Nigel if she knew he'd sent him up the hill without a jacket."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "He went to get on his boots and Ian stuck out his foot and Roger fell over it and landed on the floor with a thud."
+   }, 
+   {
+    "answer": "", 
+    "group": 1, 
+    "question": "", 
+    "sent": "Paula tried to relax back into the pillow to drift off a little, to enjoy listening to the world, but the morning was shot, it was ruined and there was no getting it back."
+   }
+  ], 
+  "2": [
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Did Michael get some money?", 
+    "sent": "Michael gave Adam two pounds."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Was Jack on his feet?", 
+    "sent": "Jack walked up to the door."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Did Andrew shake his head?", 
+    "sent": "Andrew nodded and stood against the counter."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Should you follow the van?", 
+    "sent": "The van is your lead, follow that."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Were you told to be quiet?", 
+    "sent": "Shut your smart foul mouth and sit down."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Did Bernard hit John?", 
+    "sent": "John gave Bernard a hard slap on the head."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Was Geoffrey slapped?", 
+    "sent": "Ian gave Geoffrey a hard slap across his right ear."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Did his mother cry?", 
+    "sent": "He held his mother tight and she cried into his chest."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Did you use my truck?", 
+    "sent": "You shouldn't have been racing my truck in the first place."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Had Philip been in prison for over a month?", 
+    "sent": "It had been two weeks since Philip had been sent to prison."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Was Benjamin looking through the window?", 
+    "sent": "Benjamin dashed out of the door and glanced up and down the street."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Was he startled by the shout?", 
+    "sent": "The shout caught him off guard and he fell back a little way."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Was the girl behind the desk wearing a uniform?", 
+    "sent": "A smart efficient looking girl in a military uniform sat behind a desk reading Heat magazine."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Did he touch his sword?", 
+    "sent": "He put his hands to his sword and heard the song rush through his blood louder than ever."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Was Graham drinking wine?", 
+    "sent": "Graham took a long drink from his beer as if to signal that that was an end to the matter."
+   }, 
+   {
+    "answer": "y", 
+    "group": 2, 
+    "question": "Was the television in the kitchen dusty?", 
+    "sent": "Unlike the television in the kitchen or the chairs in the lounge or much in the flat, the stereo was not dusty."
+   }, 
+   {
+    "answer": "n", 
+    "group": 2, 
+    "question": "Were there three other men in the cell with Scott?", 
+    "sent": "The door was slammed shut behind him and Scott slid down the wall right to the floor not even noticing the two other men in the cell."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He stayed against the wall."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "I wouldn't want to miss this."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "The dead must not kill the living."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Alec stood against the wall to steady himself."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He just wished he could talk to his dad."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "I'll break your neck if you don't fix that water."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Run along home now and bring us some men to kill."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Dennis was standing at the entrance to the workshop smiling at Terry."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He let Donald go and he fell to the floor with a thud."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He sat his son up on the table and laid his belt beside him."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Harry was whistling and singing to himself for the whole of the next day."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He could hear men shouting, screaming as though all of hell was at their heels."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Kevin had struck the belt across his legs and hit his fingers in the process."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "The longer you waste time in talk, the more certain it is that you will lose."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Luke kicked off his boots and shrugged off his jacket and slammed his cap down on the hook."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Matt thought the best way to have a talk with Patrick would be to take him for a pint."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "My nose was and continues to be broken, also my ribs and legs were bruised after the collision with the wheelchair."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "The following day it was made clear to Laura, if not in so many words, that she really needed to be moving out soon."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "Jenny went to the sitting room while Ross finished off his tea and washed up his dishes then went for a bath and straight to bed."
+   }, 
+   {
+    "answer": "", 
+    "group": 2, 
+    "question": "", 
+    "sent": "He kept his stock books neat and checked them every day and Steve knew he urged his son Kenneth to be nothing less than respectable and made sure he was polite with their customers."
+   }
+  ], 
+  "3": [
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Did Roger smile?", 
+    "sent": "Roger smiled and sat down."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Was Ross on his feet when he shivered?", 
+    "sent": "Ross sat back down and shivered."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Did Sam feel good about himself?", 
+    "sent": "Sam felt proud when he went home."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Did Barbara speak first?", 
+    "sent": "Albert spoke before Barbara had a chance to."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Did anyone raise his voice?", 
+    "sent": "There were choked screams and shouts of dismay."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Will the gates be shut?", 
+    "sent": "Let's have the gates closed and go home early."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Was the baby Jake's?", 
+    "sent": "Jake smiled again at his baby daughter, she was perfect."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Did his still have his helmet?", 
+    "sent": "His helmet was lost but he could still do some damage."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Was the van blue?", 
+    "sent": "All last week there was a white van parked across the street."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Was it John who woke Samuel?", 
+    "sent": "James walked in to wake Samuel at four thirty in the morning."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Does Bruce need a flat mate?", 
+    "sent": "Bruce is looking for someone to take the spare room in his flat."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Did it take them half a year to move in together?", 
+    "sent": "Within four months they moved in together to the flat on Shakespeare Road."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Was Jane concerned about looking suspicious?", 
+    "sent": "Jane had worn a suit in the belief that it might make her look less suspicious."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Did he run up to the office?", 
+    "sent": "He walked up to the office and knocked on the door waiting till he was told to enter."
+   }, 
+   {
+    "answer": "y", 
+    "group": 3, 
+    "question": "Did Harvey want to have a son?", 
+    "sent": "Harvey longed for a son to carry on the family name and talked of little else in his letters home."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Was he lying on the sofa?", 
+    "sent": "He stood over the small sofa at the other end of his office and watched the small figure curl up under his jacket."
+   }, 
+   {
+    "answer": "n", 
+    "group": 3, 
+    "question": "Did Caroline put the empty dishes in the sink?", 
+    "sent": "Caroline picked up the empty dishes from the table and piled them on the side of the sink and began to clean up the crumbs on the table."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "I cannot tell you more."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "She couldn't help feel for Alex."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "The prison guard walked along the row."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "None of the city people dress like that."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Arthur placed the bars of chocolate on the counter."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Jimmy liked the fact they were calling him Jim."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "The gathered villagers took a step back, almost as one man."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Let us give battle to these foreign snakes once and for all."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "He's got the ability to work but he just gets bored too easy."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "If I have time at the end I'll fill you in on what happened."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Henry washed his hands and sat on the seat in front of the stove."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "He did as he was told and tucked in his shirt and straightened his tie."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Hugh got up and picked up the bucket and placed it back on the floor."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "We don't even need to build the boat, the native villagers have plenty that would do."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Mark stopped in his tracks on the way to the table and stood in front of the stove."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "We could not keep them in the country, they had farms to return to, services drawing to an end."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Putting himself between Fred and his dad could only do more harm than good at least that's what Neil told him."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "The very streets seemed to know the gossip, it passed from head to head not by mouth but seemingly by sheer power of will."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Now that he was master, had his own affairs and his own men to command, he was less inclined to be ordered about by his wife."
+   }, 
+   {
+    "answer": "", 
+    "group": 3, 
+    "question": "", 
+    "sent": "Tom walked into the visiting room glad that his mum was making it back to see him so quickly or at least when they told him he had a visitor he assumed it was his mum."
+   }
+  ], 
+  "4": [
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Is the man blond?", 
+    "sent": "This man's hair is black."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Did the soldier seem interested?", 
+    "sent": "The bored looking soldier just pointed."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Did Scott do any dishes?", 
+    "sent": "Scott got up and washed his plate."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Is the enemy within the walls?", 
+    "sent": "Come within the walls to escape the enemy."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Does Claudia like teaching?", 
+    "sent": "Claudia still teaches and still claims to hate it."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Did Andrew leave the office?", 
+    "sent": "Andrew closed the office door on the way out."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Did Phil fall?", 
+    "sent": "Phil let him go and Charlie fell to the ground."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Was Ken in a bad mood?", 
+    "sent": "Ken just hoped he wasn't taking his temper out on Chris."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Was he screaming in her ear?", 
+    "sent": "He didn't seem to mind that she was screaming in his ear."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Was Stephen in the waiting room?", 
+    "sent": "David came running into the waiting room and went straight to Stephen."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Did he break the door?", 
+    "sent": "He knocked on the door so hard that he almost broke it down."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Did they travel by ship?", 
+    "sent": "After only a night's journey by sea they had travelled into the South proper."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Was he going to go back before hearing the second noise?", 
+    "sent": "Just as he was about to give up and go back he heard a second noise."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Did Malcolm tell Lewis to dress smart?", 
+    "sent": "Malcolm woke Lewis at six in the morning and told him to wear his worst jeans and shirt."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Was the chair close to the fire?", 
+    "sent": "He slumped down on the chair by the fire in a heap like his whole body had suddenly got heavy."
+   }, 
+   {
+    "answer": "n", 
+    "group": 4, 
+    "question": "Did Peter give his word to Hugh that he would look out for George?", 
+    "sent": "Peter went to bed giving himself his word that while Hugh wasn't around he'd look out for George as much as he could."
+   }, 
+   {
+    "answer": "y", 
+    "group": 4, 
+    "question": "Did Simon want his mum to visit him?", 
+    "sent": "Simon lay staring at the ceiling again with his arms behind his head and thinking about his mum, he hoped she wasn't worrying too much and hoped they'd get to visit him soon."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Things were looking up again."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "The campaign will pay for itself."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "You're getting up early in the morning."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Tell me what really happened to the truck."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Let's get out and I'll buy you a drink."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Brian sniffed and wiped his grubby hand across his nose."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "We shall arrive properly or you will never live this down."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Adam hoped she was knocked out cold and wouldn't wake till morning."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Her ambition offered no thought to the men standing behind and around her."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Chris carefully carried Eddie to his truck and laid him on the back seat."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "The bored soldier pressed a button which opened the gate and allowed them in."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "He put his hand on the little boy's shoulder and gave it an encouraging squeeze."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Somehow Jason just kept quiet and did as they told him without any smart comments."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "As soon as they taste cold steel they'll flee back to their mountains as they did before."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Martin went to get washed up for lunch then spent the afternoon working on the extension with Mark."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "He wrenched one arm from the man's grasp and used it to pull the man's ankles out from beneath him."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "By the time he got home he was feeling a little light headed and felt like he could take on the world."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "Sarah is not in a wheelchair, she is not big and strong, top half or bottom, and she does not speak with an American accent."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "For now we must go on with our lives and act as normal, which right now means drinking beer and talking rubbish like we used to do."
+   }, 
+   {
+    "answer": "", 
+    "group": 4, 
+    "question": "", 
+    "sent": "She tried hard to bring him up right and teach him right from wrong."
+   }
+  ], 
+  "5": [
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Should you turn the hearing aid off?", 
+    "sent": "Turn your hearing aid up."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Are they driving out?", 
+    "sent": "They're riding out to meet them."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Did Simon stay out of the room?", 
+    "sent": "Simon nodded and walked into the room."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did he eat sitting down?", 
+    "sent": "He sat down and began to eat breakfast."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Was he holding an axe?", 
+    "sent": "He heaved his shoulders and swung the axe again."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Was Charles feeling all right?", 
+    "sent": "Charles felt sick to the pit of his stomach."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Was Gilbert standing up?", 
+    "sent": "Gilbert sat as still as he could nursing his lip."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did Lucy touch Lewis?", 
+    "sent": "Lewis sat down and Lucy laid her hand on his cheek."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did he sometime drink a lot?", 
+    "sent": "He drank too much at times and washed too little at times."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Was Tommy looking pale?", 
+    "sent": "Tommy came out of the staff room toilet looking a little pale."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did he feel good about himself?", 
+    "sent": "He smiled again and felt like a man and not just the kid."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Was he feeling all right?", 
+    "sent": "He had a headache and every drop sounded like an arrow piercing his skull."
+   }, 
+   {
+    "answer": "n", 
+    "group": 5, 
+    "question": "Is her skirt new?", 
+    "sent": "She is wearing a cardigan over a purple blouse and a faded old red cotton skirt."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did the driver slow down?", 
+    "sent": "The driver slowed down, pulled over and got out, which was really a terrible mistake on his part."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Was he scared?", 
+    "sent": "He stood up as straight as he could with his hands behind his back and tried not to look scared."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did Sue see Nicholas falling asleep?", 
+    "sent": "Sue shook her head as she watched Nicholas give up on fighting to stay awake and fall asleep on the chair by the fire."
+   }, 
+   {
+    "answer": "y", 
+    "group": 5, 
+    "question": "Did she get a chance to fix some things in the truck?", 
+    "sent": "She seemed to show some interest in Tony fixing the truck and asked a lot of questions and even liked it when he let her fix some things and she didn't seem to mind getting covered in oil."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "You'll demand nothing of me."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Alice is looking for somewhere to live."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "After lunch he was told he had visitors."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "The door was opened and Alexander walked out."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Christopher groaned and lay his hands across his stomach."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Let me through and you'll hear nothing more of it."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "You know better than to talk to your mother like that."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Alan told Jason he would just sit outside to have his lunch."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "I can't see any amount of talk getting you out of this mess."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Colin drove into the garage to wash the truck and fill it with petrol."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "The curious thing was, on the Friday night, that the garden gate was shut."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "He was already up and dressed and invited us in for a cup of tea."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "That night he had never felt so scared since he had been sent to prison."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "Don't tell me any more about the crime, in fact, don't tell me any more full stop."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "The people need a champion to follow, to open the wall in battle and give them an opening."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "I considered it to be the minimum information I could give out in order to bring the situation under control."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "He made a funny noise and shook his head and raised his hands to indicate that he was useless at describing people."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "He could see a paying job just about to slip out of his fingers and he knew he had to act fast to save it."
+   }, 
+   {
+    "answer": "", 
+    "group": 5, 
+    "question": "", 
+    "sent": "He still felt a little drunk but not as bad as he was earlier but that didn't stop him falling in the door and waking everyone up."
+   }
+  ], 
+  "6": [
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did he lose both legs?", 
+    "sent": "A tube train took his legs."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did we make it out alive?", 
+    "sent": "We barely escaped with our lives."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Did Thomas nod?", 
+    "sent": "Thomas stepped back and shook his head."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did he try to kill an animal?", 
+    "sent": "He slammed the knife down on the lamb."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did he put down the sword?", 
+    "sent": "He lay his sword aside and extended his hands."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Did Dave groan?", 
+    "sent": "Dave kicked him in the stomach and Paul groaned."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Was Jacques in the way?", 
+    "sent": "Jacques sighed and tried to move out of the way."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did Matthew touch the wall?", 
+    "sent": "Matthew stood against the wall with his hands behind his back."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Was he surprised by what he was told?", 
+    "sent": "He had another shock when they told him he was moving cells."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Did they ever hit Michael?", 
+    "sent": "Michael knew they never hit him and that was half the problem."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did Andy plan to go out?", 
+    "sent": "Andy felt good when he got ready to go out on Saturday night."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Was he poor?", 
+    "sent": "He had money whenever he wanted it and still the best truck in town."
+   }, 
+   {
+    "answer": "y", 
+    "group": 6, 
+    "question": "Did the girl with the Polish accent have dyed hair?", 
+    "sent": "She was served by an incredibly striking girl with bright blue hair and a Polish accent."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Did Julie and Colin see a lot of children carrying guns?", 
+    "sent": "Colin and Julie walked across a parade ground past a lot of men walking around in uniform carrying guns."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Were his lips red?", 
+    "sent": "His lips were blue and though just conscious he was in no shape to walk, talk or even breathe well."
+   }, 
+   {
+    "answer": "n", 
+    "group": 6, 
+    "question": "Did Mary like to see adults reading children's books?", 
+    "sent": "Mary had absolutely no idea what the woman was talking about but there were few things that annoyed her more than adults reading children's books."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "A horse has thrown a shoe."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "I'll give him more than a slap."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Follow me closely and watch for their leader."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "There will be men to kill either way."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Duncan took a breath and wanted to be sick."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Men could be paid to do all sorts of things."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "A smile came to his lips as he thought of an idea."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Now the man is coming who will give it back to me."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "I flung out my hands and they said I had broken my wrists."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "David finally got to eat his lunch then went back to digging the trench."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "The first thing she noticed when she walked into the house was the silence."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "I ask that my people be allowed to stay behind and tend to the wounded."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "At ground level, by the wall, a ditch gathered water and dead rats crowded the ground."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "In a moment, before anyone could stop him, he had driven his sword into his own stomach."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Whenever she and Clark had tried to talk just between the two of them the subject had wandered."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "The next night after tea and locked in the cell for the night, Paul decided to write to his mum."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "Kate propped herself up on her elbows, her wine glass standing in the tall grass besides her, and announced that we should talk."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "If he does decide to do anything, he'll fill their bones with fire, put ashes in their lights and blow them past the last river."
+   }, 
+   {
+    "answer": "", 
+    "group": 6, 
+    "question": "", 
+    "sent": "I can't imagine what else you would have been talking to him about except a certain matter that I believe you said you would not talk about."
+   }
+  ], 
+  "7": [
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Will anyone listen?", 
+    "sent": "Five will be listening for sure."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did we travel for a week?", 
+    "sent": "We've been travelling almost three days."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Was Tom sitting down when he wiped his jeans?", 
+    "sent": "Tom stood up and wiped his jeans."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Does the friend want anything?", 
+    "sent": "I think our friend's demands are well justified."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did he stay away from the wood shop?", 
+    "sent": "He sighed and walked back to the wood shop."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Did the letter contain a photograph?", 
+    "sent": "Dexter opened his letter and found a photograph inside."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Did Andy give Jamie a light?", 
+    "sent": "Jamie took a cigarette and Andy gave him a light."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did she tell herself to learn a lesson?", 
+    "sent": "She just kept telling herself he had to learn a lesson."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did he fold his arms?", 
+    "sent": "He put his hands in his pockets and leaned against the truck."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Was she injured by the first knife?", 
+    "sent": "The first knife caught in her skirt and she shook it free."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did Billy rush in?", 
+    "sent": "Billy knocked on the door and waited till he was told to enter."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did he ever have a real career?", 
+    "sent": "He had jobs and lost jobs, he never had what you could call a career."
+   }, 
+   {
+    "answer": "n", 
+    "group": 7, 
+    "question": "Did they take the lift to go to the reception room?", 
+    "sent": "They followed the stairs down two flights and walked through a door into a reception room."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Did Derek want to make sure he wouldn't forget the statement?", 
+    "sent": "Derek reached for the statement and placed it in a more prominent position, the better to remember it later."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Was the river an obstacle to the army?", 
+    "sent": "The water of the river seems to battle against the army, dragging at their legs, trying to pull them under."
+   }, 
+   {
+    "answer": "y", 
+    "group": 7, 
+    "question": "Were they going to have tea?", 
+    "sent": "Just as Margaret was setting out tea, Patrick came in still in his work clothes and washed his hands in the water in the basin."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "He needed putting in his place."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "Looks like a walk did the trick."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "He called out but she did not move."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "They were definitely holding hands underneath the table."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "She turned and saw him standing in her path."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "She would soon be found if she tried to hide."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "Finally Maria sat down with a cup of tea and a sandwich."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "She threatened to leave before and this time she just had enough."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "I mostly just pick a dry white and drink it to get drunk."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "Dennis noticed someone standing in front of him when he reached for another log."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "The police officer got out of the van and picked up the two cans."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "I haven't lost a single man though they're hardly in a fit state to fight."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "He turned to the crowd who stood quietly waiting to see how the battle would turn."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "Joe had survived his first week of work and felt good to have money in his pocket."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "Damian is not normally a man of action so now, stirred into action, he looks like he means business."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "They had been allowing their voices to rise and as the debate continued the rest of the crowd caught on."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "In the distance, the walls appeared as the outline of a great dragon, curled and sleeping, back to the wind and wings folded."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "If you were coming from the high street you had to walk past three or four perfectly good pubs to get to The Three Cups."
+   }, 
+   {
+    "answer": "", 
+    "group": 7, 
+    "question": "", 
+    "sent": "She also says to tell you that you will not be able to rely on the land, not once you are under the shadow of the walls."
+   }
+  ], 
+  "8": [
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Did Gordon feel happy?", 
+    "sent": "Gordon felt his anger build up."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Did Alan shave this morning?", 
+    "sent": "Alan forgot to shave again this morning."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Can that be dangerous?", 
+    "sent": "Powerful in the wrong hands, is that."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Did William have breakfast?", 
+    "sent": "William sat down and tucked into his breakfast."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Did he yawn?", 
+    "sent": "He smiled when she let out a big yawn."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Did Edward get his hands wet?", 
+    "sent": "Edward washed his hands and flicked water at Bob."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Did Joseph walk out of the office?", 
+    "sent": "Joseph walked into the office and removed his flat cap."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Has she been to India?", 
+    "sent": "She wound up talking to Barry about her time in India."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Was he a large man?", 
+    "sent": "He was built with muscle and liked to throw his weight around."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Was the truck a new model?", 
+    "sent": "The truck was an older version of the ones the others drove."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Does Bob smoke?", 
+    "sent": "Bob sat at the entrance to the warehouse and made up a cigarette."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Was he happy about what Keith told him?", 
+    "sent": "His smile soon faded to a frown when he heard what Keith had to say."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Did they think he was irresponsible?", 
+    "sent": "He sets out to prove them wrong by holding down a job and trying to act responsible."
+   }, 
+   {
+    "answer": "y", 
+    "group": 8, 
+    "question": "Was Henry in his office  before finding Neil?", 
+    "sent": "Henry came out of his office and found Neil standing against the wall with his hands in his pockets."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Could the priests see the circle of stones?", 
+    "sent": "To one side, out of sight of the priests on the steps of their temple, was a circle of stones."
+   }, 
+   {
+    "answer": "n", 
+    "group": 8, 
+    "question": "Was there a big television in the kitchen?", 
+    "sent": "There was no television in the lounge, there was a small one in the kitchen but in the lounge all seats faced the record player."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "He shouted and the calling ceased."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Steve sat down to eat his lunch."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "He staggered into the chair at his desk."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Burn him now, don't wait for him to escape."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "They turned round just as Frankie walked toward them."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "The brothers stood up and came down from the platform."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Have that carriage sent down and have servants bring wine and water."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "The last thing Alex felt like doing after work was more work."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Arthur got in his truck and slammed his fist against the steering wheel."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Donald sat down at the kitchen table and fed his little sister her bottle."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "The speaker turned to her with a smile and a bow of his head."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "I know Richard drinks a little too much and has a bit of a temper."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "He walked into the kitchen a while after dinner dressed in his best jeans and shirt."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "He had lived with his mother till she died after a long and painful fight with lung cancer."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Dick sat down at the table and took the cup of tea that Karen placed in front of him."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "They stop in the nearest village to water the horses but the men must do without if they mind sharing."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "There was a pause, then the distant rattle of stone on stone, followed closely by its echo from the high mountain walls behind."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Richard sat down on the chair in front of the stove and tucked into his tea with the warmth of the stove on his back."
+   }, 
+   {
+    "answer": "", 
+    "group": 8, 
+    "question": "", 
+    "sent": "Slowly, very slowly, he placed the tips of his fingers on the ground and felt the power flowing through the earth to the stones touch his ability."
+   }
+  ], 
+  "9": [
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Does Harry have a younger sibling?", 
+    "sent": "Harry smiled at his little brother."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Do we want a carriage?", 
+    "sent": "Have a carriage sent for us immediately."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Did she want to stay home?", 
+    "sent": "She had refused to leave her home."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Did anyone dare step within the ring?", 
+    "sent": "No-one else had dared step within the ring."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Does he own a truck?", 
+    "sent": "He was leaning against his truck smoking a joint."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Were there any bowls on the tables before clearing up?", 
+    "sent": "All the bowls from the empty tables are cleared up."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Was Anthony in the park?", 
+    "sent": "Anthony was approached, just as he had predicted, in the park."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Was the gate made of iron?", 
+    "sent": "The gate was double, one huge mass of wood following another."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Do I believe that I will lose?", 
+    "sent": "I shall have a victory and I want it to be remembered."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Was the wall black?", 
+    "sent": "They stared at the black wall and now this offered no comfort."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Was there anyone else at the table?", 
+    "sent": "Brian sat down at an empty table and began to eat his breakfast."
+   }, 
+   {
+    "answer": "y", 
+    "group": 9, 
+    "question": "Did Ian sigh?", 
+    "sent": "Ian sighed when Howard handed him the brush and sent him out to the yard."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Did Keith fall asleep on his bed?", 
+    "sent": "Keith walked into the cell and climbed up on his bed and lay staring at the ceiling."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Was he an employee in the garage?", 
+    "sent": "He owned the garage in town and was trusted to do maintenance on all the cars in the village."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Was Morgan preparing his breakfast?", 
+    "sent": "Sophie came back in and began to make Morgan his breakfast while he sat drinking his coffee and reading the paper."
+   }, 
+   {
+    "answer": "n", 
+    "group": 9, 
+    "question": "Did Suan want a dog?", 
+    "sent": "Susan would be a cat person, she wanted a pet that could look after itself and, if it loved her, would love her as an equal."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "He uses his belt on you."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "Ted smiled and bit his bottom lip."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "I do not spare the birds a killing."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "Don't die of cold before you die in battle."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "Underneath the table her hand was gripping the chair."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "He called earlier and I already arranged to go swimming tomorrow."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "He folded his arms across his chest and put out his lip."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "We should talk about the things people talk about on first dates."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "They probably just talked about medieval folk music anyway and it was boring."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "Frank sighed and walked to the visiting room with his hands in his pockets."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "They say he can breathe fire and kill a man with a single word."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "I remember an agent with no arms who could kill a man with his teeth."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "I would not have you abandon what we have won to chase after that woman's life."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "He had walked so far since the battle and every step now seemed to him like a year."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "He could tell by the look of him and his actions that Robert had been hitting the drink again."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "We have been given this voice, in a language that is not our own, with which to tell our story."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "Ever devoted to his wife he was at her side in the delivery room when she gave birth to a baby girl in 1978."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "There was not an enemy within a hundred miles and they were trading a path their kind had not taken for many, many a year."
+   }, 
+   {
+    "answer": "", 
+    "group": 9, 
+    "question": "", 
+    "sent": "In the morning it felt good to get up and not have to wait for an inspection or get told when to go to the bathroom or have breakfast."
+   }
+  ]
+ }, 
+ "groups": 10
+}

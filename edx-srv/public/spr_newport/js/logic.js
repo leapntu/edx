@@ -1,7 +1,11 @@
 //statics
+var socket = io.connect()
+var cross = new createjs.Text('x','60px Times')
+cross.x = 600
+cross.y = 300
 
 var lsLocation = "window.localStorage.NTUdataLEAP" //this variable is used to set the local storage location
-var taskName = "sprt_frank" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
+var taskName = "sprt_newport" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
 
 var trainSents = [{"sent":"Space, space, space, press space to read the words.", "question":"", "answer":""}, {"sent":"Sometimes, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
 
@@ -17,7 +21,6 @@ var mode = "r"; //holds flag for various modes, 'q' for question, 'r' for readin
 var train = 2; //flage to handle various stages of the training phase. 1 is to flag for populating sents with trainSents, 2 flags ready state of the trianing, and 0 flags the completion
 
 var fontInfo = "15px Times" //specify font info for all text shapes (CreateJS)
-var cross = new createjs.Text('X','65px Times'); cross.x = 600; cross.y = 300;
 
 var startTime; //holds the initial time after a word is displayed
 var readTime; //holds the time when space was pushed, i.e. the end of reading time
@@ -26,6 +29,7 @@ var dataSet = []; //holds the data objects for each data point
 var answer; //the correct answer to the question to be asked, if question was given
 var corr; //a flag for the veracity of the users respons to the question, 1 is for correct and 0 is for incorrect
 var resp; //the response pushed by the user to answer the question
+var gram
 
 //logic EXTENSIONS
 
@@ -64,28 +68,33 @@ document.addEventListener("keydown", handle_key) //add listener for key events, 
 //the following function handles key presses based on the keyCode of the pressed key, and also if we are in the answering question mode 'q' or in the self paced reading mode 'r'
 //the data set variables are also set here, i.e. each key press trigers a response point to which RTs and other variables can be calculated
 function handle_key(e){
-    if(mode == "r"){
+    if(mode=='c'){
+      handleSent();
+    }
+
+    else if(mode == "r"){
         if(e.keyCode == 32){
             readTime = getMS();
             RT = readTime - startTime;
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr});
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram});
+            console.log("nextword")
             nextWord();
         }
     }
 
 
-    if(mode == "q"){
+    else if(mode == "q"){
         if(e.keyCode == 89){
             readTime = getMS();
             RT = readTime - startTime;
             resp = "y";
             evalQuestion()
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr})
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram})
             sent += 1;
             position = 0;
             stage.removeChild(text)
             mode = "r";
-            handleSent();
+            crossWait();
         }
 
         if(e.keyCode == 78){
@@ -93,12 +102,12 @@ function handle_key(e){
             RT = readTime - startTime;
             resp = "n";
             evalQuestion();
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr})
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram})
             sent += 1;
             position = 0;
             stage.removeChild(text);
             mode = "r";
-            handleSent();
+            crossWait();
         }
     }
 }
@@ -108,17 +117,16 @@ function init(){
     canvas = document.getElementById('canvas');
     stage = new createjs.Stage(canvas);
     ypos = stage.canvas.height / 2;
-    
+
     preload();
 }
 
 //this function uses CreateJS module PreloadJS to handle file loading
 function preload(){
     var manifest = [
-    {src: "assets/sents.json", id: "sents"},
-    {src: "assets/count.json", id: "count"}
+    {src: "assets/sents.json", id: "sents"}
     ];
-    
+
     q = new createjs.LoadQueue(true);
     q.on("complete", loadComplete);
     q.loadManifest(manifest);
@@ -126,62 +134,74 @@ function preload(){
 
 //function to be executed on the completion of all items to be preloaded
 function loadComplete(){
-    handleSent();
+    crossWait();
 }
 
 //this functions processes each new sentence in the sents array. It handles the training vs non training flags, and also checks for end of task events. If a normal task sentence, it resets various data variables, clears the screen, and parses the sentence into words for the subsequent nextWord events.
+function crossWait(){
+  stage.addChild(cross)
+  stage.update()
+  mode = "c"
+}
+
 function handleSent(){
+    mode = 'f'
+
     if(train==2){sents = trainSents; train = 1; handleSent()}
     else if(sent == sents.length && train == 1){train=0; genSents();}
     else if(sent == sents.length && train == 0){postData();}
     else{
     stage.removeChild(text)
-    stage.update()
-    
     words = sents[sent].sent.split(" ");
     answer = sents[sent].answer;
     word = words[position];
-    corr = "NA";
+    corr = 2;
     xpos = 10;
-    
+    gram = sents[sent].gram
+
     text = new createjs.Text(word, fontInfo);
     text.x = xpos;
     text.y = ypos;
-    
+
+    console.log(word)
+    stage.removeChild(cross)
     stage.addChild(text);
     stage.update();
     startTime = getMS();
+
+    mode = 'r'
+
     }
 }
 
-//this function processes each word to be displayed after the first in the sentece 
+//this function processes each word to be displayed after the first in the sentece
 function nextWord(){
     stage.removeChild(text);
-    
+
     position +=1;
-    
+
     if (position == words.length) {
         if (sents[sent].question != ""){
             handleQuestion();
         }
-        
+
         else {
             sent += 1;
             position = 0;
-            handleSent();
+            crossWait();
         }
     }
-    
+
     else {
-    
+
     xpos += Math.floor(text.getBounds().width) + 5;
     word = words[position];
-    
-    
+
+
     text = new createjs.Text(word, fontInfo);
     text.x = xpos;
     text.y = ypos;
-    
+
     stage.addChild(text);
     stage.update();
     startTime = getMS()
@@ -193,11 +213,11 @@ function handleQuestion(){
     mode = "q"
     words = sents[sent].question
     text = new createjs.Text(words+"\n\n\ny or n", fontInfo);
-    
+
     xpos = 350;
     text.x = xpos;
     text.y = ypos;
-    
+
     stage.addChild(text);
     stage.update();
     startTime = getMS()
@@ -208,7 +228,7 @@ function evalQuestion(){
     if(answer == resp){
         corr = 1;
     }
-    
+
     else {
         corr = 0;
     }
@@ -219,20 +239,29 @@ function genSents(){
     sents = [];
     sent = 0;
     raw = q.getResult('sents');
-    count = q.getResult('count')['count']
-    $.post("/spr_createjs/assets/countAdd.php")
-    for (s in raw["sents"][count]) {
-        sents.push(raw["sents"][count][s]);
-    }
-    randomize(sents);
-    handleSent();
+    socket.emit(
+      'incSPRCount', {"task":"spr_newport"},
+      function(resp){
+        console.log(resp)
+        var count = resp % 2
+        for (s in raw["sents"][count]) {
+            sents.push(raw["sents"][count][s]);
+        }
+        randomize(sents);
+        handleSent();
+      }
+    )
+
 }
 
 // this function will hand the processing of the dataSet array upon completion of the task, in this case posting it to local storage in window.localStorage.NTUdataLEAP for furher processing
 function postData(){
-    var lsData = JSON.parse(eval(lsLocation));
-    lsData.push({"task":taskName,"data":dataSet});
-    eval(lsLocation + "= JSON.stringify(lsData)");
+    stage.removeChild(cross); stage.update();
+
+    finalData = {dir: "/exp/english_grammaticality/data/", user: localStorage.user, data: dataSet}
+    socket.emit('recordData', finalData, function(responded){
+      console.log("Data Saved");
+    })
     stage.removeChild(text);
     text = new createjs.Text("Thank you for your time, this reading task is complete. Please return to the task selection screen to finish any remaining tasks and submit your data.",fontInfo)
     text.x = 10

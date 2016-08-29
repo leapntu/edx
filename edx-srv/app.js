@@ -16,8 +16,9 @@ io.on('connection', function (socket) {
 
   socket.on('incSPRCount', function(req, res){
     db.serialize(function(){
-      var getCount = "SELECT value FROM metadata WHERE task='spr' AND variable='count'"
-      var incCount = "UPDATE metadata SET value = ? WHERE task='spr' AND variable='count'"
+      var task = req["task"]
+      var getCount = "SELECT value FROM metadata WHERE task='"+task+"' AND variable='count'"
+      var incCount = "UPDATE metadata SET value = ? WHERE task='"+task+"' AND variable='count'"
       db.get( getCount, [],
         function(err, row){
           var count = parseInt(row['value'])
@@ -31,7 +32,7 @@ io.on('connection', function (socket) {
     })
   })
 
-  socket.on('writeSPRData', function(req, res){
+  socket.on('writeSPRFrankData', function(req, res){
     db.run(
       "INSERT INTO data_events ('subject_id', 'table', 'write_time') VALUES( ?, ?, ?)",
       [req['subject_id'], 'spr', Date.now()],
@@ -42,7 +43,7 @@ io.on('connection', function (socket) {
           for (var i = 0; i < end; i++) {
             datum = req['data'][i]
             db.run(
-              "INSERT INTO spr ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence') VALUES(?, ?, ?, ?, ?, ?, ?)",
+              "INSERT INTO spr_frank ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence') VALUES(?, ?, ?, ?, ?, ?, ?)",
               [event_id, datum.train, datum.sent_num, datum.word_num, datum.word, datum.rt, datum.sentence]
             )
           }
