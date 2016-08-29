@@ -29,7 +29,8 @@ var dataSet = []; //holds the data objects for each data point
 var answer; //the correct answer to the question to be asked, if question was given
 var corr; //a flag for the veracity of the users respons to the question, 1 is for correct and 0 is for incorrect
 var resp; //the response pushed by the user to answer the question
-var gram
+var gram = "NA"
+var Newport_group = "NA"
 
 //logic EXTENSIONS
 
@@ -76,7 +77,7 @@ function handle_key(e){
         if(e.keyCode == 32){
             readTime = getMS();
             RT = readTime - startTime;
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram});
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
             console.log("nextword")
             nextWord();
         }
@@ -89,7 +90,7 @@ function handle_key(e){
             RT = readTime - startTime;
             resp = "y";
             evalQuestion()
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram})
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text)
@@ -102,7 +103,7 @@ function handle_key(e){
             RT = readTime - startTime;
             resp = "n";
             evalQuestion();
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram})
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text);
@@ -145,6 +146,7 @@ function crossWait(){
 }
 
 function handleSent(){
+    stage.removeAllChildren()
     mode = 'f'
 
     if(train==2){sents = trainSents; train = 1; handleSent()}
@@ -176,7 +178,7 @@ function handleSent(){
 
 //this function processes each word to be displayed after the first in the sentece
 function nextWord(){
-    stage.removeChild(text);
+    //stage.removeChild(text);
 
     position +=1;
 
@@ -210,6 +212,7 @@ function nextWord(){
 
 //if a question if present, this function handles mode flagging to block spacebar responses and displays the question and prepares answer variables
 function handleQuestion(){
+  stage.removeAllChildren()
     mode = "q"
     words = sents[sent].question
     text = new createjs.Text(words+"\n\n\ny or n", fontInfo);
@@ -244,6 +247,7 @@ function genSents(){
       function(resp){
         console.log(resp)
         var count = resp % 2
+        Newport_group = count == 0 ? "A" : "B"
         for (s in raw["sents"][count]) {
             sents.push(raw["sents"][count][s]);
         }
@@ -251,21 +255,19 @@ function genSents(){
         handleSent();
       }
     )
-
 }
 
 // this function will hand the processing of the dataSet array upon completion of the task, in this case posting it to local storage in window.localStorage.NTUdataLEAP for furher processing
 function postData(){
-    stage.removeChild(cross); stage.update();
-
-    finalData = {dir: "/exp/english_grammaticality/data/", user: localStorage.user, data: dataSet}
-    socket.emit('recordData', finalData, function(responded){
-      console.log("Data Saved");
-    })
-    stage.removeChild(text);
-    text = new createjs.Text("Thank you for your time, this reading task is complete. Please return to the task selection screen to finish any remaining tasks and submit your data.",fontInfo)
-    text.x = 10
-    text.y = ypos
-    stage.addChild(text);
-    stage.update();
+  stage.removeChild(cross); stage.update();
+  finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet}
+  socket.emit('writeSPRNewportData', finalData, function(responded){
+    console.log("Data Saved");
+  })
+  stage.removeChild(text);
+  text = new createjs.Text("Thank you for your time, this reading task is complete. Please return to the task selection screen to finish any remaining tasks and submit your data.",fontInfo)
+  text.x = 10
+  text.y = ypos
+  stage.addChild(text);
+  stage.update();
 }
