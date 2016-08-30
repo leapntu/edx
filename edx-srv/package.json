@@ -17,13 +17,14 @@
     "raven"
   ],
   "author": "Matt Lou-Magnuson",
-  "license": "ISC",
+  "license": "NTU",
   "bugs": {
     "url": "https://github.com/leapntu/edx/issues"
   },
   "homepage": "https://github.com/leapntu/edx#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "nodemon": "^1.10.2",
     "socket.io": "^1.4.8",
     "sqlite3": "^3.1.4"
   }
