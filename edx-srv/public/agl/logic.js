@@ -18,11 +18,11 @@ var test_end_index = fwd_test.length
 var stim_delay = 500
 var test_pause_delay = 1200
 var train_pause_delay = 250
+var train_set = []
+var fwd_train1 = []
+var fwd_train2 = []
 var mode = 'none'
 var font_info = "30px Times"
-
-//TEST SWITCHES/
-//stim_index = train_end_index
 
 function getMS() {
   time = window.performance.now()
@@ -99,6 +99,10 @@ function genStims() {
     i += 1
   }
   
+  var cut_index = 455
+  fwd_train1 = fwd_train.slice(0, cut_index)
+  fwd_train2 = fwd_train.slice(cut_index, train_end_index)
+  
   startTicker()
 }
 
@@ -109,7 +113,19 @@ function startTicker(){
 }
 
 function startTrain(){
-  stage.addChild(mapsym[fwd_train[0]])
+  train_set = fwd_train1
+  train_end_index = train_set.length
+  stage.addChild(mapsym[train_set[0]])
+  stage.update()
+  stim_start = getMS()
+  mode = 'train'
+}
+
+function startTrain2(){
+  train_set = fwd_train2
+  train_end_index = train_set.length
+  stim_index = 0
+  stage.addChild(mapsym[train_set[0]])
   stage.update()
   stim_start = getMS()
   mode = 'train'
@@ -118,7 +134,7 @@ function startTrain(){
 function startTest(){
   stim_index = 0
   stage.removeAllChildren()
-  stage.addChild(mapsym[fwd_train[stim_index][test_index]])
+  stage.addChild(mapsym[ fwd_test[stim_index][0] ])
   stage.update()
   stim_start = getMS()
   mode = 'test'
@@ -132,7 +148,7 @@ function runTask(event){
         else {
           //stage.removeAllChildren()
           stim_index += 1
-          stage.addChild(mapsym[ fwd_train[stim_index] ])
+          stage.addChild(mapsym[ train_set[stim_index] ])
           stage.update()
           console.log(getMS() - stim_start)
           stim_start = getMS()
@@ -140,12 +156,13 @@ function runTask(event){
         }
       }
     }
-    else{ 
+    else if(train_set == fwd_train1){
+      mode = 'train_break'
+    }
+    else{
       startTest()
     }
   }
-  
-  
   
   if(mode == 'test'){
     if(stim_index < test_end_index){
@@ -153,7 +170,7 @@ function runTask(event){
         stage.removeAllChildren()
         test_index += 1
         if(test_index == 2 && needPause == 1){ 
-          mode = 'pause'
+          mode = 'test_pause'
           pause_start = getMS()
           needPause = 0
           test_index -= 1 
@@ -166,7 +183,12 @@ function runTask(event){
         stage.update()
       }
     }
+  else{
+    postData()
+    mode = 'end'
   }
+}
+
   
   if(mode == 'train_pause'){
     if( (getMS() - pause_start) > train_pause_delay) {
@@ -189,6 +211,16 @@ function runTask(event){
     stage.addChild(text)
     stage.update()
   }
+  
+  if(mode == 'train_break'){
+    stage.removeAllChildren(); stage.update();
+    var text = new createjs.Text("You are halfway done with training. Please take a short break (2-3 mins),\n\nthen press 1 to begin the second half.", font_info)
+    var ypos = stage.canvas.height / 2
+    text.x = 100
+    text.y = ypos - 100
+    stage.addChild(text)
+    stage.update()
+  }
 }
 
 document.addEventListener("keydown", handleKey)
@@ -201,4 +233,87 @@ function handleKey(event){
       mode = 'test'
     }
   }
+  
+  if(mode == 'train_break'){
+    if(event.key == "1"){
+      startTrain2()
+    }
+  }
+  
 }
+
+function postData(){
+  stage.removeAllChildren(); stage.update();
+  labelDataSet()
+  var finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet}
+  socket.emit('writeAglData', finalData, function(responded){
+    console.log("Data Saved");
+  })
+  var text = new createjs.Text("Thank you for your time, this reading task is complete.\n\nClose this tab and please return to the task selection screen.", font_info)
+  var ypos = stage.canvas.height / 2
+  text.x = 100
+  text.y = ypos - 100
+  stage.addChild(text);
+  stage.update();
+}
+
+function labelDataSet(){
+  var hilo = ["BX","CX","EY","FY","HZ","IZ"]
+  var lohi = ["XA","XD","YD","YG","ZA","ZG"]
+  var code = ""
+  var i = 0
+  while(i < dataSet.length){
+    var j = 0
+    var pair = ""
+    var item = dataSet[i]
+    var choice = item.choice
+    var symbols = ""
+    if(choice == 1){
+      pair += item.symbols[0]
+      pair += item.symbols[1]
+    }
+    else{
+      pair += item.symbols[2]
+      pair += item.symbols[3]
+    }
+    hilo.forEach(function(el){
+      if(el == pair){code = 'hilo'}
+    })
+    lohi.forEach(function(el){
+      if(el == pair){code = 'lohi'}
+    })
+    item["code"] = code
+    i += 1
+    while(j < 4){
+      symbols += item.symbols[j]
+      j += 1
+    }
+    item.symbols = symbols
+  }
+}
+// Taken from: Short guide to stimulus presentation.txt
+// # 21/05/2015 updated 23/06/2016
+// # Author: Luca
+// 
+// 
+// # For backward bias training test items are:
+// 
+// can be labelelled as FreqLast or HILO
+// "AX","AY","DY","DZ","GX","GZ",
+// 
+// label FreqFirst or LOHI
+// "XB","XC","YE","YF","ZH","ZI"
+// 
+// To create Forced-choice test pairs (e.g., BX vs XA) do an exaustive combination of all HILO with LOHI items. I’ve done this already in the file backward_test_pairs_symbols.txt
+// 
+// 
+// 
+// For forward bias training test items are:
+// 
+// label FreqLast and HILO
+// "BX","CX","EY","FY","HZ","IZ"
+// 
+// label FreqFirst and LOHI
+// "XA","XD","YD","YG","ZA","ZG"
+// 
+// To create Forced-choice test pairs (e.g., BX vs XA) do an exaustive combination of all HILO with LOHI items. I’ve done this already in the file forward_test_pairs_symbols.txt

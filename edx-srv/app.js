@@ -5,6 +5,9 @@ var io = require('socket.io')(server)
 var sqlite3 = require('sqlite3')
 var db = new sqlite3.Database('edx.db')
 
+//BASH to clone new database from .sql file
+//sqlite3 edx.db < edx.sql
+
 app.use(express.static('public/'))
 
 server.listen(80, function(){
@@ -68,6 +71,28 @@ io.on('connection', function (socket) {
             db.run(
               "INSERT INTO spr_newport ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence', 'corr', 'gram', 'group' ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
               [event_id, datum.train, datum.sent_num, datum.word_num, datum.word, datum.RT, datum.sentence, datum.corr, datum.gram, datum.group]
+            )
+          }
+          db.run("COMMIT")
+        })
+      }
+    )
+  })
+
+  socket.on('writeAglData', function(req, res){
+    db.run(
+      "INSERT INTO data_events ('subject_id', 'table', 'write_time') VALUES( ?, ?, ?)",
+      [req['subject_id'], 'agl', Date.now()],
+      function(err){
+        event_id = this.lastID
+        end = req['data'].length
+        db.serialize(function(){
+          db.run("BEGIN TRANSACTION")
+          for (var i = 0; i < end; i++) {
+            datum = req['data'][i]
+            db.run(
+              "INSERT INTO agl ('event_id', 'symbols', 'choice', 'code') VALUES(?, ?, ?, ?)",
+              [event_id, datum.symbols, datum.choice, datum.code]
             )
           }
           db.run("COMMIT")
