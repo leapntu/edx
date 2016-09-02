@@ -146,11 +146,10 @@ function runTask(event){
       if( (getMS() - stim_start) > stim_delay) {
         if(needPause == 1) {stage.removeAllChildren(), stage.update(), mode = 'train_pause', pause_start = getMS()}
         else {
-          //stage.removeAllChildren()
           stim_index += 1
           stage.addChild(mapsym[ train_set[stim_index] ])
           stage.update()
-          console.log(getMS() - stim_start)
+          //console.log(getMS() - stim_start)
           stim_start = getMS()
           needPause = 1
         }
