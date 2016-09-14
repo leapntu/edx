@@ -1,26 +1,75 @@
+6/25
+8am-3pm, 7hrs -- CreateJS (learning library api)
+5pm-9pm, 4hrs -- Nodejs  (learning server platforms)
+
+6/27
+8am-2pm, 6hrs -- CreateJS (learning library api)
+5pm-10pm, 5hrs -- CreateJS (learning library api)
+
+6/28
+8am-2pm, 6hrs -- CreateJS (learning library api, profiling implementation options)
+5pm-10pm, 5hrs -- Nodejs  (learning platforms, server code practices)
+
+7/1
+8am-1pm, 5hrs -- SPR (prototype)
+2pm-6pm, 4hrs -- SPR (prototype)
+8pm-1am, 5hrs -- SPR (prototype, testing)
+
+7/4
+7am-12am, 5hrs -- Nodejs (http server design)
+2pm-5pm, 3hrs -- Nodejs (http server design, express)
+
+7/8
+1pm-6pm, 5hrs -- Interface (design, prototype)
+9pm-1am, 4hrs -- Interface (prototype, testing)
+
 7/9
-11am - 3pm, 4hrs -- Database design
+11am-3pm, 4hrs -- Database (design)
+6pm-9pm, 3hrs -- Database (design)
 
 7/10
-8am - 12pm, 4 hrs -- Database design, Nodejs server
+8am-12pm, 4 hrs -- Database (initialization), Nodejs (database api)
+6-8pm, 2hrs -- Nodejs server (socket programming)
 
 7/11
-7:30am - 10am, 3.5 -- Raven task stim processing, server socket api
+7am-10am, 4hrs -- Raven Qualtrics (stim processing), NodeJS (socket api)
+2pm-7pm, 5hrs -- Raven Qualtrics (stim processing)
 
 7/20
-3pm - 5pm, 2 -- Port SPR
+1pm-5pm, 4hrs -- SPR (Newport-Stims)
+7pm-9pm, 2hrs -- SPR (Newport-Stims & Frank-Stims)
+
+7/21
+1pm-7pm, 6hrs -- SPR (Frank-Stims)
+9pm-2am, 5hrs -- SPR (Frank-testing, Newport-testing)
 
 8/4
-8am - 3pm, 7 -- Raven Qualtrics (API dev)
+8am-3pm, 7hrs -- Raven Qualtrics (API dev)
 
 8/8
-3pm - 6pm, 3 -- Raven Qualitrics (API dev, content creation)
+3pm-6pm, 3hrs -- Raven Qualtrics (API dev, content creation)
 
 8/11
-7am - 3pm, 8 -- Raven Qualitrics (content creation, testing)
+7am-3pm, 8hrs -- Raven Qualtrics (content creation, testing)
 
 8/12
-7am - 3pm, 8 -- Database access code, SPR and Login testing
+7am-3pm, 8hrs -- Database (access api), SPR (testing) and Interface (login api)
+
+8/20
+7pm-1am, 6hrs -- SPR Paragraph (stimuli sourcing, data format design)
+
+8/24
+9am-2pm, 5hrs -- SPR Paragraph (flow control algorithm), Database (normal/stress testing)
+
+8/25
+10am-4pm, 6hrs -- Database (stress testing, speed optimization)
 
 8/26
-11am - 6pm, 7 -- SPR Paragraph, AGL
+11am-6pm, 7hrs -- SPR Paragraph (testing), AGL (stims and prototype)
+
+8/30
+10am-2pm, 4hrs -- AGL (prototype)
+5pm-1am, 8hrs -- AGP (prototype, testing)
+
+8/31
+3pm-7pm, 4hrs -- Interface (styling, update links)
