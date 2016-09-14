@@ -35,6 +35,28 @@ io.on('connection', function (socket) {
     })
   })
 
+  socket.on('writeSPRShortData', function(req, res){
+    db.run(
+      "INSERT INTO data_events ('subject_id', 'table', 'write_time') VALUES( ?, ?, ?)",
+      [req['subject_id'], 'spr_short', Date.now()],
+      function(err){
+        event_id = this.lastID
+        end = req['data'].length
+        db.serialize(function(){
+          db.run("BEGIN TRANSACTION")
+          for (var i = 0; i < end; i++) {
+            datum = req['data'][i]
+            db.run(
+              "INSERT INTO spr_short ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence', 'corr') VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+              [event_id, datum.train, datum.sent_num, datum.word_num, datum.word, datum.RT, datum.sentence, datum.corr]
+            )
+          }
+          db.run("COMMIT")
+        })
+      }
+    )
+  })
+
   socket.on('writeSPRFrankData', function(req, res){
     db.run(
       "INSERT INTO data_events ('subject_id', 'table', 'write_time') VALUES( ?, ?, ?)",

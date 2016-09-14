@@ -1,0 +1,4 @@
+The StefanFrank.stimuli.txt file contains the original txt file with sentences used by Stefan Frank.
+The sents.json file contains those sentences parsed into JSON objects for use in the experiment.
+The file is a single array of JSON objects, where each object contains a sentence [ {},{},{} ]
+Each JSON sentence object is composed of { "sent":"<string containing sentence for display>" "question":"<string of y/n question to be asked after the sentence; leave the string empty, i.e. "", if you do not want a question>", "answer":"<either y or n for the correct answer to the question if you had one, again, leave as empty string if there is no question>"}

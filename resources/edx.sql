@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.0 on Thu Sep 1 16:01:56 2016
+-- File generated with SQLiteStudio v3.1.0 on Wed Sep 14 12:45:20 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -7,7 +7,7 @@ PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
 -- Table: spr_short
-CREATE TABLE spr_short (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER REFERENCES data_events (event_id), train INTEGER, sent_num INTEGER, word_num INTEGER, word TEXT, rt DOUBLE, sentence TEXT);
+CREATE TABLE spr_short (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER REFERENCES data_events (event_id), train INTEGER, sent_num INTEGER, word_num INTEGER, word TEXT, rt DOUBLE, sentence TEXT, corr INTEGER);
 
 -- Table: spr_newport
 CREATE TABLE spr_newport (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER REFERENCES data_events (event_id), train INTEGER, sent_num INTEGER, word_num INTEGER, word TEXT, rt DOUBLE, sentence TEXT, corr INTEGER, gram TEXT, "group" TEXT);
