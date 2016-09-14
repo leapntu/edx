@@ -47,8 +47,8 @@ io.on('connection', function (socket) {
           for (var i = 0; i < end; i++) {
             datum = req['data'][i]
             db.run(
-              "INSERT INTO spr_short ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence', 'corr') VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
-              [event_id, datum.train, datum.sent_num, datum.word_num, datum.word, datum.RT, datum.sentence, datum.corr]
+              "INSERT INTO spr_short ('event_id', 'train', 'sent_num', 'word_num', 'word', 'rt', 'sentence') VALUES(?, ?, ?, ?, ?, ?, ?)",
+              [event_id, datum.train, datum.sent_num, datum.word_num, datum.word, datum.RT, datum.sentence]
             )
           }
           db.run("COMMIT")

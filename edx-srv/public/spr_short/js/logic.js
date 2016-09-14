@@ -263,13 +263,14 @@ function genSents(){
 
 // this function will hand the processing of the dataSet array upon completion of the task, in this case posting it to local storage in window.localStorage.NTUdataLEAP for furher processing
 function postData(){
+    stage.removeAllChildren()
     stage.update();
     finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet}
     socket.emit('writeSPRShortData', finalData, function(responded){
       console.log("Data Saved");
     })
     stage.removeChild(text);
-    text = new createjs.Text("Thank you for your time, this reading task is complete. Please return to the task selection screen to finish any remaining tasks and submit your data.",fontInfo)
+    text = new createjs.Text("Thank you for your time, this reading task is complete. Please return to the task selection screen to finish any remaining tasks.",fontInfo)
     text.x = 10
     text.y = ypos
     stage.addChild(text);
