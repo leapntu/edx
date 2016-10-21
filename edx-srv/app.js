@@ -11,7 +11,7 @@ var db = new sqlite3.Database('edx.db')
 app.use(express.static('public/'))
 
 server.listen(80, function(){
-  console.log("server booted and listening on ")
+  console.log("server booted and listening on 80")
 })
 
 io.on('connection', function (socket) {
