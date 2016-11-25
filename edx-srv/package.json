@@ -1,0 +1,31 @@
+{
+  "name": "edx",
+  "version": "1.0.0",
+  "description": "edex grant app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leapntu/edx.git"
+  },
+  "keywords": [
+    "edx",
+    "leap",
+    "spr",
+    "raven"
+  ],
+  "author": "Matt Lou-Magnuson",
+  "license": "NTU",
+  "bugs": {
+    "url": "https://github.com/leapntu/edx/issues"
+  },
+  "homepage": "https://github.com/leapntu/edx#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.10.2",
+    "socket.io": "^1.4.8",
+    "sqlite3": "^3.1.4"
+  }
+}

@@ -28,8 +28,10 @@
       <div class="panel panel-default">
         <div class="panel-heading"><h3>EdEx Portal</h3></div>
         <div class="panel-body">
-          Email: <br> <input id="email" type="text"> <br>
-          Password: <br> <input id="password" type="text"> <br>
+          Subject ID: <br>
+          edx[matric#] --> edxU1234567F <br>
+           <input id="email" type="text"> <br><br> 
+          Password: <br> <input id="password" type="text"> <br><br>
           <button type="button" onclick=login()>Login</button>
           <button type="button" onclick=register()>New User</button>
         </div>
@@ -70,7 +72,7 @@ function register() {
       "password": password  },
     function (data) {
       if (data.status == "created") {
-        localStorage.LEAP_subject_id = data.subject_id
+        localStorage.LEAP_subject_id = email
         location = "/edx/index.html" }
       else {alert("The email has already been registered, please try another address")}
     }
