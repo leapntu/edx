@@ -57,6 +57,7 @@ function login() {
         }
       else if (data.password == password) {
         localStorage.LEAP_subject_id = data.subject_id
+        localStorage.email = email
         location = "../edx/index.html"
       }
     }
@@ -72,7 +73,8 @@ function register() {
       "password": password  },
     function (data) {
       if (data.status == "created") {
-        localStorage.LEAP_subject_id = email
+        localStorage.LEAP_subject_id = data.subject_id
+        localStorage.email = email
         location = "/edx/index.html" }
       else {alert("The email has already been registered, please try another address")}
     }
