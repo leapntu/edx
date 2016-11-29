@@ -209,6 +209,7 @@ function runTask(event){
     text.y = ypos - 100
     stage.addChild(text)
     stage.update()
+    test_start = getMS()
   }
   
   if(mode == 'train_break'){
@@ -244,7 +245,7 @@ function handleKey(event){
 function postData(){
   stage.removeAllChildren(); stage.update();
   labelDataSet()
-  var finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet}
+  var finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet, rt:getMS() - test_start}
   socket.emit('writeAglData', finalData, function(responded){
     console.log("Data Saved");
   })

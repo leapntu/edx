@@ -113,8 +113,8 @@ io.on('connection', function (socket) {
           for (var i = 0; i < end; i++) {
             datum = req['data'][i]
             db.run(
-              "INSERT INTO agl ('event_id', 'symbols', 'choice', 'code') VALUES(?, ?, ?, ?)",
-              [event_id, datum.symbols, datum.choice, datum.code]
+              "INSERT INTO agl ('event_id', 'symbols', 'choice', 'code', rt) VALUES(?, ?, ?, ?, ?)",
+              [event_id, datum.symbols, datum.choice, datum.code, datum.rt]
             )
           }
           db.run("COMMIT")

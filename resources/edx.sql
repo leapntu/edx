@@ -22,7 +22,7 @@ CREATE TABLE spr_frank (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INT
 CREATE TABLE data_events (event_id INTEGER PRIMARY KEY AUTOINCREMENT, subject_id TEXT REFERENCES subjects (subject_id), "table" TEXT, write_time INTEGER);
 
 -- Table: agl
-CREATE TABLE agl (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER REFERENCES data_events (event_id), symbols TEXT, choice INTEGER, code TEXT);
+CREATE TABLE agl (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER REFERENCES data_events (event_id), symbols TEXT, choice INTEGER, code TEXT, rt INTEGER);
 
 -- Table: metadata
 CREATE TABLE metadata (task TEXT, variable TEXT, value TEXT, PRIMARY KEY (task, variable));
