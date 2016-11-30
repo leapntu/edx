@@ -27,5 +27,10 @@ CREATE TABLE agl (datum_id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER R
 -- Table: metadata
 CREATE TABLE metadata (task TEXT, variable TEXT, value TEXT, PRIMARY KEY (task, variable));
 
+-- Add Default Values
+INSERT INTO metadata (task, variable, value) VALUES ('spr_frank', 'count', 0);
+
+INSERT INTO metadata (task, variable, value) VALUES ('spr_newport', 'count', 0);
+
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
