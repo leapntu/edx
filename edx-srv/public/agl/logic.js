@@ -88,7 +88,7 @@ function genStims() {
     img.y = canvas.height / 2
     img.x = canvas.width / 2
   })
-  
+
   var symbols = ["A","B","C","D","E","F","G","H","I","X","Y","Z"]
   var stim_keys = Object.keys(stims)
   randomize(symbols)
@@ -98,11 +98,11 @@ function genStims() {
     mapsym[ symbols[i] ] = stims[ stim_keys[i] ]
     i += 1
   }
-  
-  var cut_index = 455
+
+  var cut_index = 355
   fwd_train1 = fwd_train.slice(0, cut_index)
   fwd_train2 = fwd_train.slice(cut_index, train_end_index)
-  
+
   startTicker()
 }
 
@@ -162,19 +162,19 @@ function runTask(event){
       startTest()
     }
   }
-  
+
   if(mode == 'test'){
     if(stim_index < test_end_index){
       if( (getMS() - stim_start) > stim_delay) {
         stage.removeAllChildren()
         test_index += 1
-        if(test_index == 2 && needPause == 1){ 
+        if(test_index == 2 && needPause == 1){
           mode = 'test_pause'
           pause_start = getMS()
           needPause = 0
-          test_index -= 1 
+          test_index -= 1
         }
-        else if(test_index > 3){stim_index += 1; test_index = -1; needPause = 1;  mode = "ask"}
+        else if(test_index > 3){stim_index += 1; test_index = -1; needPause = 1;  mode = "ask"; test_start = getMS();}
         else{
           stage.addChild(mapsym[ fwd_test[stim_index][test_index] ])
           stim_start = getMS()
@@ -188,20 +188,20 @@ function runTask(event){
   }
 }
 
-  
+
   if(mode == 'train_pause'){
     if( (getMS() - pause_start) > train_pause_delay) {
       needPause = 0
       mode = 'train'
     }
   }
-  
+
   if(mode == 'test_pause'){
     if( (getMS() - pause_start) > test_pause_delay) {
       mode = 'test'
     }
   }
-  
+
   if(mode == 'ask'){
     var text = new createjs.Text("Which pair of symbols was most like what you saw during training?\n\nPress 1 for the first, or 2 for the second.", font_info)
     var ypos = stage.canvas.height / 2
@@ -209,9 +209,8 @@ function runTask(event){
     text.y = ypos - 100
     stage.addChild(text)
     stage.update()
-    test_start = getMS()
   }
-  
+
   if(mode == 'train_break'){
     stage.removeAllChildren(); stage.update();
     var text = new createjs.Text("You are halfway done with training. Please take a short break (2-3 mins),\n\nthen press 1 to begin the second half.", font_info)
@@ -229,23 +228,23 @@ function handleKey(event){
   if(mode == 'ask'){
     if(event.key == "1" || event.key == "2"){
       var symbols = fwd_test[ (stim_index) - 1]
-      dataSet.push( {"symbols": symbols, "choice": event.key} )
+      dataSet.push( {"symbols": symbols, "choice": event.key, "rt":getMS() - test_start} )
       mode = 'test'
     }
   }
-  
+
   if(mode == 'train_break'){
     if(event.key == "1"){
       startTrain2()
     }
   }
-  
+
 }
 
 function postData(){
   stage.removeAllChildren(); stage.update();
   labelDataSet()
-  var finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet, rt:getMS() - test_start}
+  var finalData = {subject_id: localStorage.LEAP_subject_id, data: dataSet}
   socket.emit('writeAglData', finalData, function(responded){
     console.log("Data Saved");
   })
@@ -294,26 +293,26 @@ function labelDataSet(){
 // Taken from: Short guide to stimulus presentation.txt
 // # 21/05/2015 updated 23/06/2016
 // # Author: Luca
-// 
-// 
+//
+//
 // # For backward bias training test items are:
-// 
+//
 // can be labelelled as FreqLast or HILO
 // "AX","AY","DY","DZ","GX","GZ",
-// 
+//
 // label FreqFirst or LOHI
 // "XB","XC","YE","YF","ZH","ZI"
-// 
+//
 // To create Forced-choice test pairs (e.g., BX vs XA) do an exaustive combination of all HILO with LOHI items. I’ve done this already in the file backward_test_pairs_symbols.txt
-// 
-// 
-// 
+//
+//
+//
 // For forward bias training test items are:
-// 
+//
 // label FreqLast and HILO
 // "BX","CX","EY","FY","HZ","IZ"
-// 
+//
 // label FreqFirst and LOHI
 // "XA","XD","YD","YG","ZA","ZG"
-// 
+//
 // To create Forced-choice test pairs (e.g., BX vs XA) do an exaustive combination of all HILO with LOHI items. I’ve done this already in the file forward_test_pairs_symbols.txt
