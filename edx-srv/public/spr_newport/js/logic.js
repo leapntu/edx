@@ -7,7 +7,7 @@ cross.y = 300
 var lsLocation = "window.localStorage.NTUdataLEAP" //this variable is used to set the local storage location
 var taskName = "sprt_newport" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
 
-var trainSents = [{"sent":"Space, space, space, press space to read the words.", "question":"", "answer":""}, {"sent":"Sometimes, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
+var trainSents = [{"sent":"You will see a sentence, and press spacebar when you are done reading it.", "question":"", "answer":""}, {"sent":"Afterwards, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
 
 var sents = []; //array of sentence strings to be used in a given phase
 var sent = 0 //the index of the current sentence in sents
@@ -79,7 +79,7 @@ function handle_key(e){
             RT = readTime - startTime;
             dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
             console.log("nextword")
-            nextWord();
+            handleQuestion();
         }
     }
 
@@ -154,14 +154,15 @@ function handleSent(){
     else if(sent == sents.length && train == 0){postData();}
     else{
     stage.removeChild(text)
-    words = sents[sent].sent.split(" ");
-    answer = sents[sent].answer;
-    word = words[position];
+    full_sent = sents[sent].sent
+    // words = sents[sent].sent.split(" ");
+    // answer = sents[sent].answer;
+    // word = words[position];
     corr = 2;
     xpos = 10;
     gram = sents[sent].gram
 
-    text = new createjs.Text(word, fontInfo);
+    text = new createjs.Text(full_sent, fontInfo);
     text.x = xpos;
     text.y = ypos;
 
