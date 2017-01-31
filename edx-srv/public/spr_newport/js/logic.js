@@ -77,9 +77,16 @@ function handle_key(e){
         if(e.keyCode == 32){
             readTime = getMS();
             RT = readTime - startTime;
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"NA", "word": "NA", "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
             console.log("nextword")
-            handleQuestion();
+            if (sents[sent].question != ""){
+                console.log("here")
+                handleQuestion();
+            }
+            else if (sents[sent].question == "") {
+              console.log("there")
+              sent += 1
+              handleSent() }
         }
     }
 
@@ -89,8 +96,8 @@ function handle_key(e){
             readTime = getMS();
             RT = readTime - startTime;
             resp = "y";
-            evalQuestion()
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
+            corr = evalQuestion()
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':evalQuestion(), 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text)
@@ -102,8 +109,8 @@ function handle_key(e){
             readTime = getMS();
             RT = readTime - startTime;
             resp = "n";
-            evalQuestion();
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
+            corr = evalQuestion();
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':evalQuestion(), 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text);
@@ -161,6 +168,7 @@ function handleSent(){
     corr = 2;
     xpos = 10;
     gram = sents[sent].gram
+    if (train == 1) {gram == "NA"}
 
     text = new createjs.Text(full_sent, fontInfo);
     text.x = xpos;
@@ -216,6 +224,7 @@ function handleQuestion(){
   stage.removeAllChildren()
     mode = "q"
     words = sents[sent].question
+    answer = sents[sent].answer
     text = new createjs.Text(words+"\n\n\ny or n", fontInfo);
 
     xpos = 350;
@@ -229,12 +238,15 @@ function handleQuestion(){
 
 //function to process the question response as correct or not
 function evalQuestion(){
+    console.log(answer, resp, answer == resp, answer != resp)
     if(answer == resp){
-        corr = 1;
+        console.log(1)
+        return 1;
     }
 
-    else {
-        corr = 0;
+    else if(answer != resp) {
+        console.log(2)
+        return 0;
     }
 }
 
