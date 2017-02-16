@@ -7,7 +7,7 @@ cross.y = 300
 var lsLocation = "window.localStorage.NTUdataLEAP" //this variable is used to set the local storage location
 var taskName = "sprt_newport" //this variable is used to set the task name that will be sent allong with the data set object to the local storage in the browser
 
-var trainSents = [{"sent":"Space, space, space, press space to read the words.", "question":"", "answer":""}, {"sent":"Sometimes, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
+var trainSents = [{"sent":"You will see a sentence, and press spacebar when you are done reading it.", "question":"", "answer":""}, {"sent":"Afterwards, there will be a questiion.", "question":"Is this a question?", "answer":"y"}, {"sent":"Ok, we are about to begin the task.","question":"Are you ready?", "answer":"y"}]
 
 var sents = []; //array of sentence strings to be used in a given phase
 var sent = 0 //the index of the current sentence in sents
@@ -77,9 +77,16 @@ function handle_key(e){
         if(e.keyCode == 32){
             readTime = getMS();
             RT = readTime - startTime;
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":position+1, "word": word, "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"NA", "word": "NA", "RT": RT, "sentence":sents[sent].sent, 'corr':corr, 'gram':gram, 'group':Newport_group});
             console.log("nextword")
-            nextWord();
+            if (sents[sent].question != ""){
+                console.log("here")
+                handleQuestion();
+            }
+            else if (sents[sent].question == "") {
+              console.log("there")
+              sent += 1
+              handleSent() }
         }
     }
 
@@ -89,8 +96,8 @@ function handle_key(e){
             readTime = getMS();
             RT = readTime - startTime;
             resp = "y";
-            evalQuestion()
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
+            corr = evalQuestion()
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':evalQuestion(), 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text)
@@ -102,8 +109,8 @@ function handle_key(e){
             readTime = getMS();
             RT = readTime - startTime;
             resp = "n";
-            evalQuestion();
-            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':corr, 'gram':gram, 'group':Newport_group})
+            corr = evalQuestion();
+            dataSet.push({"train":train, "sent_num":sent+1, "word_num":"q", "word":"NA", "RT": RT, "sentence":sents[sent].question, 'corr':evalQuestion(), 'gram':gram, 'group':Newport_group})
             sent += 1;
             position = 0;
             stage.removeChild(text);
@@ -140,7 +147,6 @@ function loadComplete(){
 
 //this functions processes each new sentence in the sents array. It handles the training vs non training flags, and also checks for end of task events. If a normal task sentence, it resets various data variables, clears the screen, and parses the sentence into words for the subsequent nextWord events.
 function crossWait(){
-  stage.removeAllChildren()
   stage.addChild(cross)
   stage.update()
   mode = "c"
@@ -155,14 +161,16 @@ function handleSent(){
     else if(sent == sents.length && train == 0){postData();}
     else{
     stage.removeChild(text)
-    words = sents[sent].sent.split(" ");
-    answer = sents[sent].answer;
-    word = words[position];
+    full_sent = sents[sent].sent
+    // words = sents[sent].sent.split(" ");
+    // answer = sents[sent].answer;
+    // word = words[position];
     corr = 2;
     xpos = 10;
     gram = sents[sent].gram
+    if (train == 1) {gram == "NA"}
 
-    text = new createjs.Text(word, fontInfo);
+    text = new createjs.Text(full_sent, fontInfo);
     text.x = xpos;
     text.y = ypos;
 
@@ -216,6 +224,7 @@ function handleQuestion(){
   stage.removeAllChildren()
     mode = "q"
     words = sents[sent].question
+    answer = sents[sent].answer
     text = new createjs.Text(words+"\n\n\ny or n", fontInfo);
 
     xpos = 350;
@@ -229,12 +238,15 @@ function handleQuestion(){
 
 //function to process the question response as correct or not
 function evalQuestion(){
+    console.log(answer, resp, answer == resp, answer != resp)
     if(answer == resp){
-        corr = 1;
+        console.log(1)
+        return 1;
     }
 
-    else {
-        corr = 0;
+    else if(answer != resp) {
+        console.log(2)
+        return 0;
     }
 }
 
