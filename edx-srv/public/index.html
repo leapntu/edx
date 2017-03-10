@@ -3,18 +3,12 @@
 <html>
 <head>
   <title>EdEx Login</title>
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="lib/createjs-2015.11.26.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
   <script> var socket = io()</script>
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -30,14 +24,14 @@
         <div class="panel-body">
           <b>Subject ID</b> <br>
           edx[matric#] --> edxU1234567F <br>
-           <input id="email" type="text"> <br><br> 
+           <input id="email" type="text"> <br><br>
           <b>Password</b> <br> <input id="password" type="text"> <br><br>
           <button type="button" onclick=login()>Login</button>
           <button type="button" onclick=register()>New User</button>
         </div>
         </div>
       </div>
-    
+
     <div class="col-xs-4"> </div>
 </div>
 </div>
